@@ -37,26 +37,28 @@
  *
  * 0.0.1, 2013.szept.29.
  */
+
+///CleanCode by Magyari László 2016.10.17.
 package batfai.samuentropy.brainboard2;
 
 public class NeuronAnimActivity extends android.app.Activity {
 
     @Override
-    public void onCreate(android.os.Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+    public void onCreate(android.os.Bundle savedInstanceState) { //minden activity egy metódus hívások sorozataként indul el és az onCreate() az első (a sorrendben) ezek közül ami lefut
+        super.onCreate(savedInstanceState);//betölti az eddig mentett állapotot 
+        setContentView(R.layout.main); //beállítja magát a főablakot hogy nézzen ki a res/layout/main.xml alapján
 
-        android.widget.ImageView iv = (android.widget.ImageView) findViewById(R.id.neuronanimation);
+        android.widget.ImageView iv = (android.widget.ImageView) findViewById(R.id.neuronanimation);//az ImageView miatt tudjuk az xml-ben megadni a képi widget tulajdonságait
 
-        iv.setBackgroundResource(R.drawable.neuron_animation);
+        iv.setBackgroundResource(R.drawable.neuron_animation);//háttérképet beállítja a res/drawable/neuron_animation(.xml) alapján keresse a program 
 
-        final android.graphics.drawable.AnimationDrawable anim = (android.graphics.drawable.AnimationDrawable) iv.getBackground();
+        final android.graphics.drawable.AnimationDrawable anim = (android.graphics.drawable.AnimationDrawable) iv.getBackground();//megadja hogy a háttérkép egy animáció lesz anim néven és betölti a hátteret
 
-        runOnUiThread(new Runnable() {
+        runOnUiThread(new Runnable() {//a  UserInterface szálon fusson
 
             @Override
             public void run() {
-                anim.start();
+                anim.start();//elindítja magát az anim nevű animációt
             }
         });
     }
