@@ -89,10 +89,21 @@
         <finalName>${project.artifactId}</finalName>
         <sourceDirectory>src</sourceDirectory>        
         <plugins>
+  <plugin>
+          <groupId>com.simpligility.maven.plugins</groupId>
+
+          <artifactId>android-maven-plugin</artifactId>
+          <version>${it-plugin.version}</version>
+          <configuration>
+            <sdk>
+              <platform>16</platform>
+            </sdk>
+          </configuration>
+        </plugin>
             <plugin> 
                 <groupId>com.simpligility.maven.plugins</groupId> 
                 <artifactId>android-maven-plugin</artifactId> 
-                <version>4.4.3</version> 
+                <version>4.1.1</version> 
                 <configuration> 
                     <deleteConflictingFiles>true</deleteConflictingFiles> 
                     <undeployBeforeDeploy>true</undeployBeforeDeploy> 

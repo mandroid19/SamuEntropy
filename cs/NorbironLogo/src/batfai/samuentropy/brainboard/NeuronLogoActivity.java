@@ -42,21 +42,20 @@ package batfai.samuentropy.brainboard;
 public class NeuronLogoActivity extends android.app.Activity {
 
     @Override
-    public void onCreate(android.os.Bundle savedInstanceState) {
+    public void onCreate(android.os.Bundle savedInstanceState) { //minden activity egy metódus hívások sorozataként indul el és az onCreate() az első (a sorrendben) ezek közül ami lefut
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.main); //beállítja magát a főablakot hogy nézzen ki a res/layout/main.xml alapján
 
-        android.widget.ImageView iv = (android.widget.ImageView) findViewById(R.id.neuronanimation);
+        android.widget.ImageView iv = (android.widget.ImageView) findViewById(R.id.neuronanimation); //az ImageView miatt tudjuk az xml-ben megadni a képi widget tulajdonságait
 
-        iv.setBackgroundResource(R.drawable.neuron_animation);
+        iv.setBackgroundResource(R.drawable.neuron_animation); //háttérképet beállítja a res/drawable/neuron_animation(.xml) alapján keresse a program 
+        final android.graphics.drawable.AnimationDrawable anim = (android.graphics.drawable.AnimationDrawable) iv.getBackground(); //megadja hogy a háttérkép egy animáció lesz anim néven és betölti a hátteret
 
-        final android.graphics.drawable.AnimationDrawable anim = (android.graphics.drawable.AnimationDrawable) iv.getBackground();
-
-        runOnUiThread(new Runnable() {
+        runOnUiThread(new Runnable() { //a  UserInterface szálon fusson
 
             @Override
-            public void run() {
-                anim.start();
+            public void run() { 
+                anim.start();  //elindítja magát az anim nevű animációt
             }
         });
 
