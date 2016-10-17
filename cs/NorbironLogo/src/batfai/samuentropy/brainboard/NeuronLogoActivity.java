@@ -37,13 +37,14 @@
  *
  * 0.0.1, 2013.szept.29.
  */
+///CleanCode by Magyari László
 package batfai.samuentropy.brainboard;
 
 public class NeuronLogoActivity extends android.app.Activity {
 
     @Override
     public void onCreate(android.os.Bundle savedInstanceState) { //minden activity egy metódus hívások sorozataként indul el és az onCreate() az első (a sorrendben) ezek közül ami lefut
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); //betölti az eddig mentett állapotot 
         setContentView(R.layout.main); //beállítja magát a főablakot hogy nézzen ki a res/layout/main.xml alapján
 
         android.widget.ImageView iv = (android.widget.ImageView) findViewById(R.id.neuronanimation); //az ImageView miatt tudjuk az xml-ben megadni a képi widget tulajdonságait
