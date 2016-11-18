@@ -426,7 +426,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 fromsy = y;
             }
 
-       
+        //  repaint();
 
         } else if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
 

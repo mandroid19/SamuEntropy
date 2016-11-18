@@ -2,7 +2,7 @@
  * SplashActivity.java
  *
  * Norbiron Game
- * This is a case study for creating sprites for SamuEntropy/Brainboard.
+  * This is a case study for creating sprites for SamuEntropy/Brainboard.
  *
  * Copyright (C) 2016, Dr. Bátfai Norbert
  *
@@ -19,9 +19,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Ez a program szabad szoftver; terjeszthető illetve módosítható a
+ * Ez a program szabad szoftver; terjeszthetõ illetve módosítható a
  * Free Software Foundation által kiadott GNU General Public License
- * dokumentumában leírtak; akár a licenc 3-as, akár (tetszőleges) későbbi
+ * dokumentumában leírtak; akár a licenc 3-as, akár (tetszõleges) késõbbi
  * változata szerint.
  *
  * Ez a program abban a reményben kerül közreadásra, hogy hasznos lesz,

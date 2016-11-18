@@ -58,7 +58,7 @@ public class NeuronBox implements Cloneable {
     protected static android.graphics.Paint boxPaint = new android.graphics.Paint();
     protected static android.graphics.Paint selectedBoxPaint = new android.graphics.Paint();
     protected int selectedBoxPaintSize = 0;
-    protected int covertype;
+    public static int covertype;
     
     protected boolean open = false;
     protected boolean selected = false;

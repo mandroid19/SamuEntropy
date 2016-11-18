@@ -5,41 +5,41 @@
 
     <item
         android:drawable="@drawable/neuron3inkscape2a0c"
-        android:duration="70"/>
+        android:duration="90"/>
     <item
         android:drawable="@drawable/neuron3inkscape2a1c"
-        android:duration="70"/>
+        android:duration="90"/>
     <item
         android:drawable="@drawable/neuron3inkscape2a2c"
-        android:duration="70"/>
+        android:duration="90"/>
     <item
         android:drawable="@drawable/neuron3inkscape2a3c"
-        android:duration="70"/>
+        android:duration="90"/>
     <item
         android:drawable="@drawable/neuron3inkscape2a4c"
-        android:duration="70"/>
+        android:duration="90"/>
     <item
         android:drawable="@drawable/neuron3inkscape2a5c"
-        android:duration="70"/>
+        android:duration="90"/>
     <item
         android:drawable="@drawable/neuron3inkscape2a6c"
-        android:duration="70"/>
+        android:duration="90"/>
 
     
     <item
         android:drawable="@drawable/neuron3inkscape2a5c"
-        android:duration="70"/>
+        android:duration="90"/>
     <item
         android:drawable="@drawable/neuron3inkscape2a4c"
-        android:duration="70"/>
+        android:duration="90"/>
     <item
         android:drawable="@drawable/neuron3inkscape2a3c"
-        android:duration="70"/>
+        android:duration="90"/>
     <item
         android:drawable="@drawable/neuron3inkscape2a2c"
-        android:duration="70"/>
+        android:duration="90"/>
     <item
         android:drawable="@drawable/neuron3inkscape2a1c"
-        android:duration="70"/>
+        android:duration="90"/>
     
 </animation-list>

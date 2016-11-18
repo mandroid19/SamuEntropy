@@ -1,5 +1,5 @@
 /*
- * NeuronAnimActivity.java
+ * SurfaceEvents.java
  *
  * Norbiron Game
  * This is a case study for creating sprites for SamuEntropy/Brainboard.
@@ -38,33 +38,43 @@
  * 0.0.1, 2013.szept.29.
  */
 package batfai.samuentropy.brainboard7;
-import android.preference.PreferenceManager;
 
 /**
  *
  * @author nbatfai
  */
-public class NeuronGameActivity extends android.app.Activity {
+public class SurfaceEvents implements android.view.SurfaceHolder.Callback {
 
-    public static final String PREFERENCES = "NeuronGameSave";
+    private NorbironSurfaceView surfaceView;
+    Thread thread;
+
+    public SurfaceEvents(NorbironSurfaceView surfaceView) {
+
+        this.surfaceView = surfaceView;
+    }
 
     @Override
-    public void onCreate(android.os.Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        android.content.SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
+    public void surfaceDestroyed(android.view.SurfaceHolder holder) {
 
-        setContentView(R.layout.main);
-       
+        surfaceView.stop();
+        thread = null;
+    }
+
+    @Override
+    public void surfaceCreated(android.view.SurfaceHolder holder) {
+
+        thread = new Thread(surfaceView);
+        thread.start();
+        surfaceView.repaint();
 
     }
 
     @Override
-    protected void onPause()
-    {
-        super.onPause();
+    public void surfaceChanged(android.view.SurfaceHolder holder, int format,
+            int width, int height) {
 
-        android.content.SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-        android.content.SharedPreferences.Editor editor = settings.edit();
-        NorbironSurfaceView.saveData(editor);
+        surfaceView.repaint();
+
     }
+
 }

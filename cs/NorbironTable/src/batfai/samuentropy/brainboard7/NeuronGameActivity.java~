@@ -54,7 +54,7 @@ public class NeuronGameActivity extends android.app.Activity {
         android.content.SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
 
         setContentView(R.layout.main);
-       
+        //NorbironSurfaceView.setData(settings);
 
     }
 
